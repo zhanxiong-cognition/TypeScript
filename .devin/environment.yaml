@@ -2,24 +2,21 @@ setup:
   - name: Install dependencies
     run: npm ci
 
-  - name: Install hereby build tool globally
-    run: npm install -g hereby
-
   - name: Build the compiler
-    run: hereby local
+    run: npx hereby local
 
   - name: Build the test infrastructure
-    run: hereby tests
+    run: npx hereby tests
 
 maintenance:
   - name: Reinstall dependencies
     run: npm ci
 
   - name: Rebuild the compiler
-    run: hereby local
+    run: npx hereby local
 
   - name: Rebuild test infrastructure
-    run: hereby tests
+    run: npx hereby tests
 
 knowledge:
   - name: Build system
